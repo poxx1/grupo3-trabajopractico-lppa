@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Entities.Models
 {
@@ -16,27 +10,21 @@ namespace Entities.Models
 
         [Required(ErrorMessage = "Requerido")]
         [MaxLength(25)]
-        public string Apellido { get; set; }
+        public string Marca { get; set; }
 
         [Required(ErrorMessage = "Requerido")]
-        [MaxLength(35)]
-        [EmailAddress(ErrorMessage = "Email incorrecto")]
-        public string Email { get; set; }
+        public float Precio { get; set; }
 
         [Required(ErrorMessage = "Requerido")]
-        [DisplayName("Teléfono")]
-        public long Telefono { get; set; }
+        [MaxLength(25)]
+        public string Descripcion { get; set; }
 
         [Required(ErrorMessage = "Requerido")]
-        public long Cuit { get; set; }
+        [MaxLength(25)]
+        public string Categoria { get; set; }
 
-        [NotMapped]
-        public string FullName
-        {
-            get
-            {
-                return Nombre + " " + Apellido;
-            }
-        }
+        // Imagen del producto
+        [Required(ErrorMessage = "Requerido")]
+        public byte[] Content { get; set; }
     }
 }
