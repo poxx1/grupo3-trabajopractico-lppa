@@ -20,8 +20,37 @@ namespace Business.Models
         public string Password { get; set; }
 
         [Required(ErrorMessage = "Requerido")]
+        [MaxLength(12)]
+        public string Type { get; set; }
+
+        [Required(ErrorMessage = "Requerido")]
         [MaxLength(35)]
         [EmailAddress(ErrorMessage = "Email incorrecto")]
         public string Email { get; set; }
+
+        [Required(ErrorMessage = "Requerido")]
+        [MaxLength(25)]
+        public string Direccion { get; set; }
+
+        [Required(ErrorMessage = "Requerido")]
+        [MaxLength(25)]
+        public string Cuidad { get; set; }
+
+        [Required(ErrorMessage = "Requerido")]
+        [MaxLength(25)]
+        public string Provincia { get; set; }
+
+        [Required(ErrorMessage = "Requerido")]
+        [MaxLength(10)]
+        public string CodigoPostal { get; set; }
+
+        [Required(ErrorMessage = "Requerido")]
+        [MaxLength(25)]
+        public string Pais { get; set; }
+
+        [Required(ErrorMessage = "Requerido")]
+        [MaxLength(12)]
+        public string Telefono { get; set; }
+
     }
 }
