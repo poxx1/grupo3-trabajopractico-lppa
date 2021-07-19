@@ -1,4 +1,5 @@
-﻿using Marketplace.Entities.Models;
+﻿using Marketplace.Business;
+using Marketplace.Entities.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,9 +17,11 @@ namespace Marketplace.Website.Controllers
         }
 
         // GET: Admin/Details/5
-        public ActionResult Details(int id)
+        public ActionResult List()
         {
-            return View();
+            var biz = new LoginBiz();
+            var model = biz.List();
+            return View(model);
         }
 
         // GET: Admin/Create
