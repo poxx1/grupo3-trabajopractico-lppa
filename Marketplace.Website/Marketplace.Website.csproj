@@ -149,8 +149,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Carniceria.jpg" />
+    <Content Include="Content\Lacteos.jpg" />
     <Content Include="Content\logo.jpg" />
+    <Content Include="Content\Market.png" />
+    <Content Include="Content\Normalize.css" />
+    <Content Include="Content\Panaderia.png" />
     <Content Include="Content\site.css" />
+    <Content Include="Content\Veduleria.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -185,7 +191,7 @@
     <Content Include="Views\Product\Create.cshtml" />
     <Content Include="Views\Product\Edit.cshtml" />
     <Content Include="Views\Product\Delete.cshtml" />
-    <Content Include="Views\Category\View.cshtml" />
+    <Content Include="Views\Home\View.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,88 +1,239 @@
-﻿ul,ul li {
-    margin: 0px;
-    padding: 0px;
+﻿:root {
+    --blanco: #ffffff;
+    --verdeO: #255A53;
+    --verdeC: #52BA84;
+    --celeste: #2896B9;
+    --naranja: #cc9d6e;
+}
+/* === IMPORTANTE ===================================================
+   No modificar estos estilos, ya que son imprescindibles para
+   que la pagina se vea correctamente.
+   ================================================================== */
+
+/*-- Basico ----------------------------------------------------------*/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 16px; /* 1rem = 10px */
+    /*font-family: Verdana, Geneva, Tahoma, sans-serif;*/
+    font-family: Poppins, sans-serif;
+    background-color: var(--verdeC);
+    color: var(--blanco);
+}
+
+ul, ul li {
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
-h1,h2,h3 p, form{
+h1, h2, h3, p, form {
     margin: 0;
     padding: 0;
 }
 
-.clear{
+.clear {
     clear: both;
 }
 
-.img{
+/*img {
     border: none;
-}
+}*/
 
-.articulo > p{
-    text-align:justify;
-}
-
-body{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
-}
-
-/*=== Layout ===*/
-#contenedor{
+/*.articulo > p {
+    text-align: justify;
+}*/
+/*-- Layout ----------------------------------------------------------*/
+#contenedor {
     width: 90%;
-    max-width:980px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
-#cabecera, #menu, #contenido, #contenido #principal, #contenido #secundario, #pie{
-    border: 2px solid #808080
-}
-#contenido{
-    float:right;
-    width: 100%;
+#cabecera, #menu, #contenido, #contenido #principal, #contenido #secundario, #pie {
+    border: 2px solid #777;
 }
 
-#contenido #principal{
-    float: left;
-    width: 74%;
-}
-    #contenido #secundario{
-        float: right;
-        width: 25%;
-    }
-
-#pie{
+#cabecera {
     clear: both;
 }
 
+#menu {
+    clear: both;
+}
+
+#contenido {
+    /*float: right;*/
+    width: 100%;
+}
+
+/*    #contenido #principal {
+        float: left;
+        width: 78%;
+    }
+
+    #contenido #secundario {
+        float: right;
+        width: 20%;
+    }
+*/
+#pie {
+    clear: both;
+}
+
+/*-- Cabecera --------------------------------------------------------*/
 #cabecera #logo {
     float: left;
 }
 
-#cabecera #buscador{
+#cabecera #buscador {
     float: right;
 }
+
+/*-- Menu ------------------------------------------------------------*/
+#menu ul, #menu_principal li {
+    display: inline;
+    float: left;
+    padding: 0 10px 0 0;
+}
+
+/*-- Seccion Principal -----------------------------------------------*/
+#contenido #principal .articulo img {
+    width: 100px;
+    float: left;
+}
+
+/*-- Pie de pagina ---------------------------------------------------*/
+#pie .enlaces {
+    float: left;
+}
+
+#pie .copyright {
+    float: right;
+}
+
+/* === IMPORTANTE ========================================================================
+   A partir de aqui, se pueden anadir todos los estilos propios que sean necesarios.
+   ======================================================================================= */
 
 #cabecera,
 #menu,
 #contenido,
-#contenedor #principal,
+#contenido #principal,
 #contenido #secundario,
-#pie{
+#pie {
     padding: .5em;
     border: none;
 }
 
-#menu ul li a{
-    text-decoration: none;
-}
+    #menu ul li a {
+        text-decoration: none;
+    }
 
-#cabecera #logo{
-    background: url(logo.jpg) no-repeat 0px 0px;
-    width: 200px;
-    height: 100px;
-}
 
-#menu{
+
+/*    #cabecera h1 {
+        background: url(logo.jpg) no-repeat 0px 0px;
+        width: 250px;
+        height: 33px;
+    }
+*/
+/*        #cabecera h1 span {
+            visibility: hidden;
+        }*/
+
+#menu {
     margin-bottom: .5em;
-    border-bottom: 1px solid #000000
+    border-bottom: 1px;
+}
+
+#contenido {
+    padding: 0;
+}
+/*
+    #contenido #principal {
+        width: 75%;
+    }
+
+    #contenido #secundario {
+        width: 20%;
+        border: 1px solid #d41010;
+    }
+
+#secundario h2 {
+    background: #d41010;
+    padding: .2em;
+    color: #fff
+}*/
+
+#pie {
+    padding: .5em 0;
+    margin-top: 1em;
+    border-top: 1px solid #C5C5C5;
+    border-bottom: 1px solid #C5C5C5;
+    background: var(--verdeO);
+    text-align: center
+}
+
+/*.table {
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+    .table td, .table th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    .table tr:nth-child(even) {
+        background-color: var(--naranja);
+    }
+
+    .table tr:hover {
+        background-color: #ddd;
+    }
+
+    .table th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: var(--verdeO);
+    }*/
+
+.nav-category li img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+}
+
+.nav-category li {
+    width: 25%;
+    display: inline;
+}
+
+.nav-container {
+    display: inline;
+}
+
+#menu_principal {
+    text-decoration: none;
+    color: var(--blanco);
+}
+
+.HomeImage {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.contenidoHome {
+}
+
+.text-center {
+    text-align: center;
 }

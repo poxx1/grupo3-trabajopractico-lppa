@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<Marketplace.Entities.Models.Category>
-@{ 
+@{
     ViewBag.Title = "Index Categoría";
 }
 <p>
@@ -21,8 +21,7 @@
             </td>
             <td>
                 @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
-                @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })|
-                @Html.ActionLink("Seleccionar", "View", new { id = item.Id })
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
             </td>
         </tr>
     }

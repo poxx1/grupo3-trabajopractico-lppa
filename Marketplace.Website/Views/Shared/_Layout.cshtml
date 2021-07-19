@@ -4,32 +4,27 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
+    <link rel="preload" href="~/Content/Normalize.css" as="style">
     <link href="~/Content/site.css" rel="stylesheet" />
 </head>
 <body>
     <div id="contenedor">
         <div id="cabecera">
-            <div id="logo">
-                <h1></h1>
+            <div id="buscador">
+                <form action="#" method="post">
+                    Buscar &nbsp;
+                    <input name="busqueda" type="text" />
+                </form>
             </div>
-        <div id="buscador">
-            <form action="#" method="post">
-                Buscar &nbsp;
-                <input name="busqueda" type="text"/>
-            </form>
         </div>
+        <div>
+            <h1> Bienvenido a la tienda web del Grupo 3 </h1>
         </div>
         <div id="menu">
-            <ul>
-                <li>
-                    <a href="/">Home</a>
-                </li>
-                <li>
-                    <a href="@Url.Action("Index","Category")">Categorias</a>
-                </li>
-                <li>
-                    <a href="@Url.Action("Index","Product")">Productos</a>
-                </li>
+            <ul id="menu_principal">
+                <li><a href="/">Home</a></li>
+                <li><a href="@Url.Action("Index","Category")">Categorias</a></li>
+                <li><a href="@Url.Action("Index","Product")">Productos</a></li>
                 <li>
                     @if (User.Identity.IsAuthenticated)
                     {
@@ -41,9 +36,6 @@
         <div id="contenido">
             <div id="principal">
                 @RenderBody() @*Donde se van a anexar todas las paginas parciales que voy a utilizar*@
-            </div>
-            <div id="secundario">
-                <h2> Opciones secundarias</h2>
             </div>
         </div>
         <div id="pie">

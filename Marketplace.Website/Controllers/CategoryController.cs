@@ -28,22 +28,7 @@ namespace Marketplace.Website.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult View(int id)
-        {
-            var biz = new ProductBiz();
-            var listProducts = biz.List();
-            List<Product> listProductsCategory = new List<Product>();
-
-            foreach (var prod in listProducts)// Por cada Item en la lista 
-            {
-                if (id == prod.CategoryId)
-                {
-                    listProductsCategory.Add(prod);
-                }
-            }
-            return View(listProductsCategory);
-        }
+     
 
         [HttpPost]
         public ActionResult Create(Category model)

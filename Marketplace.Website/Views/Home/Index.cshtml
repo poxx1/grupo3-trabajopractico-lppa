@@ -1,9 +1,25 @@
-﻿
-@{
-    ViewBag.Title = "Index Home";
+﻿@{
+    ViewBag.Title = "Home";
 }
-
-<h2>@ViewBag.Title</h2>
-<p>
-    Hola @User.Identity.Name<br /> Usuario de: @ViewBag.Country
-</p>
+<div class="contenidoHome">
+    <div class="HomeImage">
+        <img src="~/Content/Market.png"><img />
+    </div>
+    <div class="nav-container">
+        <div class="text-center">
+            <h3>Seleccione una categoría para iniciar un pedido</h3>
+        </div>
+        <ul class="nav-category">
+            <li><a href=@Url.Action("View", "Home", new { id = 1 })><img src="~/Content/Lacteos.jpg" alt="" /></a></li>
+            
+            <li><a href=@Url.Action("View", "Home", new { id = 4 })><img src="~/Content/Carniceria.jpg" alt="" /></a></li>
+            
+            <li><a href=@Url.Action("View", "Home", new { id = 2 })><img src="~/Content/Panaderia.png" alt="" /></a></li>
+            
+            <li><a href=@Url.Action("View", "Home", new { id = 2 })><img src="~/Content/Veduleria.jpg" alt="" /></a></li>
+          
+        </ul>
+    </div>
+    <br />
+    <br />
+</div>
