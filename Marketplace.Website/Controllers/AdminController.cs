@@ -22,12 +22,14 @@ namespace Marketplace.Website.Controllers
         }
 
         // GET: Admin/Create
+        [AllowAnonymous]
         public ActionResult Create()
         {
             return View();
         }
 
         // POST: Admin/Create
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult Create(LogInModel model)
         {

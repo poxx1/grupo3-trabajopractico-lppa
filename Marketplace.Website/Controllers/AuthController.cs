@@ -18,6 +18,10 @@ namespace Marketplace.Website.Controllers
             {
                 ReturnUrl = @returnUrl
             };            
+
+            if(model.ReturnUrl== "/Admin/Create")
+                RedirectToAction("Admin","Create");
+
             return View(model);
         }
 

@@ -63,6 +63,10 @@
     <Compile Include="Migrations\202107190002440_LogIn.designer.cs">
       <DependentUpon>202107190002440_LogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202107191758042_InitialCreate.cs" />
+    <Compile Include="Migrations\202107191758042_InitialCreate.designer.cs">
+      <DependentUpon>202107191758042_InitialCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\BaseDataServices.cs" />
@@ -93,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107190002440_LogIn.resx">
       <DependentUpon>202107190002440_LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107191758042_InitialCreate.resx">
+      <DependentUpon>202107191758042_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

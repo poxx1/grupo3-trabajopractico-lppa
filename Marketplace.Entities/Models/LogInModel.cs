@@ -16,5 +16,7 @@ namespace Marketplace.Entities.Models
         [HiddenInput]
         public string ReturnUrl { get; set; }
 
+        public bool isAdmin { get; set; }
+
     }
 }
