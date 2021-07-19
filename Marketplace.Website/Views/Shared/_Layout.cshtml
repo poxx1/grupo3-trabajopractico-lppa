@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
@@ -23,8 +22,9 @@
         <div id="menu">
             <ul id="menu_principal">
                 <li><a href="/">Home</a></li>
-                <li><a href="@Url.Action("Index","Category")">Categorias</a></li>
-                <li><a href="@Url.Action("Index","Product")">Productos</a></li>
+                @* Saco de aca los productos y categorias para meterlos en el adminPanel
+        <li><a href="@Url.Action("Index","Category")">Categorias</a></li>
+        <li><a href="@Url.Action("Index","Product")">Productos</a></li> *@
                 <li>
                     @if (User.Identity.IsAuthenticated)
                     {

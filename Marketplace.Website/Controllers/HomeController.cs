@@ -10,6 +10,33 @@ namespace Marketplace.Website.Controllers
     public class HomeController : Controller
     {
         private readonly ProductBiz _db;
+        public static List<Product> cartProducts = new List<Product>();
+
+        [HttpGet]
+        // List all of the products
+        public ActionResult Carrito(Product product)
+        {
+            if (product.CategoryId != 0)
+                cartProducts.Add(product);
+
+            return View(cartProducts);
+        }
+
+        //[HttpGet]
+        //// Clear the cart
+        //public ActionResult CarritoQuitItem(Product product)
+        //{
+        //    cartProducts.Remove(product);
+        //    return Carrito();
+        //}
+
+        //[HttpGet]
+        //// Clear the cart
+        //public ActionResult CarritoClear()
+        //{
+        //    cartProducts.Clear();
+        //    return View(cartProducts);
+        //}
 
         [HttpGet]
         public ActionResult View(int id)

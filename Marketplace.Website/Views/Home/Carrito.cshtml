@@ -1,11 +1,5 @@
 ﻿@model IEnumerable<Marketplace.Entities.Models.Product>
 
-@{
-    ViewBag.Title = "View";
-}
-
-<h2>Select the desired product</h2>
-
 <table class="table">
     <tr>
         <th>
@@ -44,7 +38,7 @@
             @Html.DisplayFor(modelItem => item.CategoryId)
         </td>
         <td>
-            @Html.ActionLink("Agregar", "Carrito", item ) |
+            @Html.ActionLink("Eliminar", "CarritoQuitItem", item)
         </td>
     </tr>
 }
