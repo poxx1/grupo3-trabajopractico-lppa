@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Marketplace.Entities.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,7 +29,7 @@ namespace Marketplace.Website.Controllers
 
         // POST: Admin/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(LogInModel model)
         {
             try
             {

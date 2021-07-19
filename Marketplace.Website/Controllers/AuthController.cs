@@ -92,6 +92,8 @@ namespace Marketplace.Website.Controllers
             #endregion
         }
 
+
+
         public ActionResult LogOut()
         {
             var context = Request.GetOwinContext();
