@@ -1,9 +1,6 @@
 ﻿using Marketplace.Business;
 using Marketplace.Entities.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Marketplace.Website.Controllers
@@ -34,59 +31,70 @@ namespace Marketplace.Website.Controllers
         [HttpPost]
         public ActionResult Create(LogInModel model)
         {
+            if (!ModelState.IsValid) // Para controlar si el modelo es válido 
+                return View();
+
+            // TODO: implementar para bitacora
             try
             {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
+                var biz = new LoginBiz();
+                biz.Create(model);
+                return RedirectToAction("Index");//
             }
-            catch
+            catch (Exception e)
             {
-                return View();
+                Console.WriteLine(e);
+                return View(model);
             }
         }
 
         // GET: Admin/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            var biz = new LoginBiz();
+            var model = biz.Get(id);
+            return View(model);
         }
 
         // POST: Admin/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(LogInModel model)
         {
             try
             {
-                // TODO: Add update logic here
-
+                var biz = new LoginBiz();
+                biz.Edit(model);
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception e)
             {
-                return View();
+                Console.WriteLine(e);
+                return View(model);
             }
         }
 
         // GET: Admin/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            var biz = new LoginBiz();
+            var model = biz.Get(id);
+            return View(model);
         }
 
         // POST: Admin/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(LogInModel model)
         {
             try
             {
-                // TODO: Add delete logic here
-
+                var biz = new LoginBiz();
+                biz.Delete(model);
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception e)
             {
-                return View();
+                Console.WriteLine(e);
+                return View(model);
             }
         }
     }
