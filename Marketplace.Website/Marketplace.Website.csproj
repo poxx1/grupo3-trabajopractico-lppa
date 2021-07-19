@@ -156,7 +156,7 @@
     <Content Include="Content\Market.png" />
     <Content Include="Content\Normalize.css" />
     <Content Include="Content\Panaderia.png" />
-    <Content Include="Content\site.css" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\Veduleria.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -200,6 +200,8 @@
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Admin\Delete.cshtml" />
     <Content Include="Views\Admin\List.cshtml" />
+    <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FTPProfile1.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

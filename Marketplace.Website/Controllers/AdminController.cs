@@ -8,9 +8,16 @@ namespace Marketplace.Website.Controllers
     public class AdminController : Controller
     {
         // GET: Admin
-        public ActionResult Index()
+        public ActionResult Index(LogInModel model)
         {
-            return View();
+            //if (model.isAdmin) {
+             return View();
+            //}
+            
+            //else
+            //{
+              //  return RedirectToAction("Index", "Home");
+            
         }
 
         // GET: Admin/Details/5

@@ -1,10 +1,8 @@
 ﻿@model IEnumerable<Marketplace.Entities.Models.LogInModel>
 
-@{
-    ViewBag.Title = "List";
-}
+@{ ViewBag.Title = "List"; }
 
-<h2>List</h2>
+<h2>Usuarios</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -16,23 +14,29 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Password)
-        </th>    
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReturnUrl)
+        </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Email)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Password)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ReturnUrl)
+    </td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.Id }) |
+        @Html.ActionLink("Eliminar", "Delete", new { id = item.Id })
+    </td>
+</tr>}
 
 </table>

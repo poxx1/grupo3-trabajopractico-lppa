@@ -1,9 +1,7 @@
 ﻿@model Marketplace.Entities.Models.Category
 
-@{
-    ViewBag.Title = "Eliminar";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+@{ ViewBag.Title = "Eliminar";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
 
 <h2>Eliminar Categoría</h2>
 
@@ -23,9 +21,8 @@
     {
         //@Html.AntiForgeryToken()
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Volver a la lista", "Index")
-        </div>
-    }
+<div class="form-actions no-color">
+    <input type="submit" value="Delete" class="btn btn-default" /> |
+    @Html.ActionLink("Volver a la lista", "Index")
+</div>}
 </div>

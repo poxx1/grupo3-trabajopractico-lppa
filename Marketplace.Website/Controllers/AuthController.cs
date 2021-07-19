@@ -12,15 +12,17 @@ namespace Marketplace.Website.Controllers
     public class AuthController : BaseController
     {
         [HttpGet]
-        public ActionResult LogIn(string returnUrl)
+        public ActionResult LogIn(string returnUrl, LogInModel mod)
         {
             var model = new LogInModel
             {
                 ReturnUrl = @returnUrl
-            };            
+            };
 
-            if(model.ReturnUrl== "/Admin/Create")
-                RedirectToAction("Admin","Create");
+            if (mod.isAdmin)
+            {
+                return View(mod);
+            }
 
             return View(model);
         }
@@ -30,7 +32,7 @@ namespace Marketplace.Website.Controllers
         {
             if (!ModelState.IsValid)
             {
-                return View();
+                return View(model);
             }
 
         #region NewLoginWithBD
@@ -61,6 +63,7 @@ namespace Marketplace.Website.Controllers
                     }
                 }
                 ModelState.AddModelError("", "El email o la contraseña no son válidos.");
+
                 return View();
                 //return View(model);
             }
