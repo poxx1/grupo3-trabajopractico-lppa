@@ -1,6 +1,20 @@
-﻿
+﻿@* Admin page after login *@
 @{
     ViewBag.Title = "Inicio de sesión";
+}
 
+<tr>
+    <td>
+        <h2>Productos</h2>
+        <a href=@Url.Action("Index", "Product")>Ir al menu de gestion</a>
+    </td>
+    <td>
+        <h2>Categorias</h2>
+        <a href=@Url.Action("Index", "Category")>Ir al menu de gestion</a>
+    </td>
+    <td>
+        <h2>Ususarios</h2>
+        <a href=@Url.Action("", "")>Ir al menu de gestion</a>
+    </td>
 
-@ * Admin page after login *@}
+</tr>
